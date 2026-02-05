@@ -7,14 +7,12 @@ This project predicts the outcome of T20 cricket matches using only **pre‑matc
 ## 📁 Repository Structure
 
 T20-Cricket-Match-Outcome-Prediction/  
-├── data/                         — Raw Cricsheet match files + venue mapping  
-├── notebooks/  
-│   ├── T20_Data_Processing.ipynb — Parsing, cleaning, preprocessing  
-│   ├── Feature_Engineering.ipynb — Chronological feature creation  
-│   ├── Model_Training.ipynb      — ML models + evaluation  
-│   └── EDA.ipynb                 — Exploratory analysis  
-├── results/                      — Model outputs, tables, plots  
-├── requirements.txt              — Python dependencies  
+├── data/  
+│   ├── raw_t20_csv/              — 3113 raw T20 match CSV files + 1 README.txt  
+│   └── venue_country_map.csv     — Venue-to-country mapping for home advantage  
+├── t20_prediction.ipynb          — Main notebook containing full workflow  
+├── requirement.txt               — Python dependencies  
+├── .gitignore                    — Git ignore rules  
 └── README.md                     — Project documentation  
 
 ---
@@ -113,15 +111,7 @@ A full results table is available in the `Model_Training.ipynb` notebook.
 The engineered features (strength differences, form differences, rivalry metrics, home advantage) are largely **linear and additive**, making Logistic Regression a natural fit.
 
 More complex models capture nonlinear interactions but do not significantly outperform the simpler baseline because the dataset’s predictive structure is already well‑captured by linear relationships.
-
----
-
-## 🚀 Future Improvements
-
-- Add a soft voting ensemble combining LR + XGBoost + MLP  
-- Add SHAP values for model interpretability  
-- Extend to women’s T20 or ODI formats  
-- Deploy as a web app (Streamlit or FastAPI)  
+ 
 
 ---
 
@@ -135,11 +125,18 @@ pip install -r requirements.txt
 
 ## ▶️ Running the Project
 
-Open the notebooks in the following order:
+This project is implemented in a single notebook:
 
-1. `T20_Data_Processing.ipynb`
-2. `Feature_Engineering.ipynb`
-3. `Model_Training.ipynb`
+- `t20_prediction.ipynb`
+
+Open it in Jupyter Notebook or JupyterLab and run all cells sequentially.  
+The notebook includes:
+
+- Data loading  
+- Preprocessing  
+- Feature engineering  
+- Model training  
+- Evaluation
 
 ---
 
