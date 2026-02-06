@@ -102,7 +102,7 @@ Logistic Regression achieved the highest F1 score, followed closely by XGBoost a
 
 Tree‑based models (Random Forest, AdaBoost) performed moderately well, while KNN struggled due to high‑dimensional one‑hot encoded inputs.
 
-A full results table is available in the `Model_Training.ipynb` notebook.
+A full results table is available in the `t20_prediction.ipynb` notebook.
 
 ---
 
