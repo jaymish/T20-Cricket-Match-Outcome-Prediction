@@ -150,8 +150,6 @@ All code is released under the MIT License.
 ## 👤 Author
 
 **Jaymish Patel**  
-Machine Learning Project — Saint Peter’s University
-
 
 
 
